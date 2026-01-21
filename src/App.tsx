@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState<number>(0)
 
   return (
     <div className="app">
@@ -23,7 +23,7 @@ function App() {
           </div>
           
           <p className="hint">
-            Edit <code>src/App.jsx</code> to get started building your quiz app!
+            Edit <code>src/App.tsx</code> to get started building your quiz app!
           </p>
         </div>
       </main>

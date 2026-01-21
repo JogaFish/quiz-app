@@ -2,15 +2,13 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: #fff;
 }
 
 .app-header {
   text-align: center;
-  margin-bottom: 2rem;
+  padding: 2rem 1rem;
 }
 
 .app-header h1 {
@@ -27,66 +25,36 @@
 }
 
 .app-main {
-  width: 100%;
-  max-width: 600px;
-  padding: 0 1rem;
+  flex: 1;
+  padding: 2rem 1rem;
+  overflow-x: auto;
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 16px;
-  padding: 2rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.card h2 {
-  margin-top: 0;
-  font-size: 2rem;
-}
-
-.card p {
-  line-height: 1.6;
-  font-size: 1.1rem;
-}
-
-.counter-section {
-  margin: 2rem 0;
+.quiz-scroller {
   display: flex;
-  justify-content: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
-.counter-section button {
-  background: rgba(255, 255, 255, 0.2);
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  color: #fff;
-  padding: 0.75rem 2rem;
-  font-size: 1.1rem;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: 600;
+/* Custom scrollbar styling */
+.quiz-scroller::-webkit-scrollbar {
+  height: 8px;
 }
 
-.counter-section button:hover {
-  background: rgba(255, 255, 255, 0.3);
-  border-color: rgba(255, 255, 255, 0.5);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.hint {
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  font-size: 0.95rem;
-  opacity: 0.8;
-}
-
-.hint code {
-  background: rgba(0, 0, 0, 0.2);
-  padding: 0.2rem 0.5rem;
+.quiz-scroller::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
-  font-family: 'Courier New', monospace;
+}
+
+.quiz-scroller::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.quiz-scroller::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
 }

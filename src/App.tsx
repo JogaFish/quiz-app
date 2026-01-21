@@ -1,30 +1,29 @@
-import { useState } from 'react'
 import './App.css'
+import QuizPreview from './components/quizPreview/QuizPreview'
+import { quizzes } from './data/quizzes'
 
 function App() {
-  const [count, setCount] = useState<number>(0)
+  const handleQuizClick = (quizId: string) => {
+    console.log('Selected quiz:', quizId)
+    // TODO: Navigate to quiz or show quiz details
+  }
 
   return (
     <div className="app">
       <header className="app-header">
-        <h1>Welcome to Quiz App</h1>
-        <p>A modern React application</p>
+        <h1>Quiz App</h1>
+        <p>Choose a quiz to get started</p>
       </header>
       
       <main className="app-main">
-        <div className="card">
-          <h2>Get Started</h2>
-          <p>This is your new React application built with Vite.</p>
-          
-          <div className="counter-section">
-            <button onClick={() => setCount((count) => count + 1)}>
-              Count is {count}
-            </button>
-          </div>
-          
-          <p className="hint">
-            Edit <code>src/App.tsx</code> to get started building your quiz app!
-          </p>
+        <div className="quiz-scroller">
+          {quizzes.map((quiz) => (
+            <QuizPreview
+              key={quiz.id}
+              quiz={quiz}
+              onClick={handleQuizClick}
+            />
+          ))}
         </div>
       </main>
     </div>

@@ -2,8 +2,8 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: #fff;
+  color: black;
+  background-color: white;
 }
 
 .app-header {
@@ -22,12 +22,6 @@
   font-size: 1.25rem;
   margin-top: 0.5rem;
   opacity: 0.9;
-}
-
-.app-main {
-  flex: 1;
-  padding: 2rem 1rem;
-  overflow-x: auto;
 }
 
 .quiz-scroller {

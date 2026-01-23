@@ -1,7 +1,7 @@
 .quiz-preview {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid black;
   border-radius: 12px;
   padding: 1.5rem;
   cursor: pointer;
@@ -27,7 +27,7 @@
 .quiz-preview__title {
   font-size: 1.25rem;
   margin: 0;
-  color: #fff;
+  color: black;
   font-weight: 600;
   flex: 1;
 }
@@ -38,12 +38,12 @@
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  color: #fff;
+  color: black;
   white-space: nowrap;
 }
 
 .quiz-preview__description {
-  color: rgba(255, 255, 255, 0.8);
+  color: black;
   font-size: 0.9rem;
   margin: 0 0 1rem 0;
   line-height: 1.5;
@@ -54,7 +54,7 @@
   justify-content: space-between;
   align-items: center;
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: black;
 }
 
 .quiz-preview__category {

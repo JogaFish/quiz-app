@@ -1,6 +1,6 @@
 import './App.css'
-import QuizPreview from './components/quizPreview/QuizPreview'
-import { quizzes } from './data/quizzes'
+import QuizPreview from './components/quizPreview/quizPreview'
+import { quizzes } from './data/quizDetails'
 
 function App() {
   const handleQuizClick = (quizId: string) => {
@@ -15,17 +15,15 @@ function App() {
         <p>Choose a quiz to get started</p>
       </header>
       
-      <main className="app-main">
-        <div className="quiz-scroller">
-          {quizzes.map((quiz) => (
-            <QuizPreview
-              key={quiz.id}
-              quiz={quiz}
-              onClick={handleQuizClick}
-            />
-          ))}
-        </div>
-      </main>
+      <div className="quiz-scroller">
+        {quizzes.map((quiz) => (
+          <QuizPreview
+            key={quiz.id}
+            quiz={quiz}
+            onClick={handleQuizClick}
+          />
+        ))}
+      </div>
     </div>
   )
 }
